@@ -1,0 +1,515 @@
+:root{
+    --navbar-background-color:#000;
+    --fontfamily-home:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-color-default:#fff;
+}
+
+/**********Nav Bar***********/
+nav{
+    z-index: 99999;
+    width: 100%;
+    color: var(--font-color-default);
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.nav-link{
+    color: var(--font-color-default);
+}
+.nav-pills .nav-link.active, .nav-pills .show >.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    border-bottom:2px solid var(--bs-primary);
+    background-color: transparent;
+}
+.nav-item > .nav-link.active{
+    color: var(--bs-primary);
+}
+
+.dropdown-menu2{
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    width: 100%;
+    z-index: 99999999;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #e2e2e2;
+    display: none;
+    padding: 5%;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    line-height: 2rem;
+}
+.dropdown-menu{
+    font-size: 0.8rem;
+    line-height: 2rem;
+}
+.nested-dropdown:hover .dropdown-menu2{
+    display:grid;
+    opacity: 1;
+}
+/********* End of navbar **************/
+section#home{
+    background: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--font-color-default);
+    z-index: 1;
+}
+#home .container-fluid{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+#home .container .row div h1{
+    font-family: var(--fontfamily-home);
+    font-size:72px;
+    line-height:86.4px;
+    color: var(--font-color-default);
+}
+.typed-out::after{
+    content: '';
+    position: relative;
+    bottom: 2rem;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    font-size: 2rem;
+    width: 0;
+    padding-inline: 0.25rem;
+    animation: typing 15s linear 1s infinite alternate-reverse;
+}
+@keyframes typing{
+    0%{
+        content: 'De ';
+    }
+    5%{
+        content: 'Desi ';
+    }
+    10%{
+        content: 'Design ';
+    }
+    20%{
+        content: 'Designer ';
+    }
+    25%{
+        content: 'De';
+    }
+    30%{
+        content: 'Devel';
+    }
+    40%{
+        content: 'Develo ';
+    }
+    50%{
+        content: 'Developer';
+    }
+    54%{
+        content: '';
+    }
+    55%{
+        content: 'Ph ';
+    }
+    60%{
+        content: 'Photo ';
+    }
+    70%{
+        content: 'Photograph ';
+    }
+    75%{
+        content: 'Photographer ';
+    }
+    79%{
+        content: '';
+    }
+    80%{
+        content: 'Free ';
+    }90%{
+        content: 'Freelan ';
+    }100%{
+        content: 'Freelancer ';
+    }
+}
+
+/******* ENd of home section*******/
+/************** Start About section*****************/
+#about .container{
+    box-shadow: 0.1rem 0.1rem 1rem 0.05rem rgb(167, 167, 167);
+    font-family: var(--fontfamily-home);
+}
+.aboutHeader{
+    position: relative;
+}
+.aboutHeader::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 3px;    
+    width: 30%;
+    background-color: var(--bs-primary);
+}
+.aboutHeader ~ p{
+    font-size: 1.1rem;
+}
+/********End of about section*****/
+/************ Services section*************/
+#services .container .row div{
+    position: relative;
+}
+.line-mf {
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+i.icon{
+    color: #000000;
+    font-size: 3rem;
+}
+
+.ico-circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #0078ff;
+    background-color:rgb(255, 255, 255);
+    display: block;
+}
+.ico-circle:hover {
+    background-color:var(--bs-primary);
+    box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.1);
+}
+.ico-circle:hover i.icon{
+    color: #ffffff;
+} 
+.card-title{
+    font-size: 1.4rem;
+}
+/********** End of services section ************/
+/********** Section pre-work **************/
+#pre-work .pre-workBaseLayer{
+     background: url(/images/post-3.jpg);
+     background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+    background-attachment: fixed;
+    color: var(--font-color-default);
+    position: relative;
+    top: 10rem;
+    height: 100vh;
+}
+#pre-work .pre-workBaseLayer .background-color{
+    background-color: rgba(32, 115, 211, 0.7);
+    height: 100%;
+}
+.pre-work-content{
+    width: 90%;
+    padding-top: 2rem;    
+}
+@media screen and (max-width:575px) {
+    #pre-work{
+        height: 100vh;
+    }
+   .pre-work-content{        
+        max-height:900px;
+    }
+    .pre-work-content .row .col-md-3 .pre-work-icon .pre-work-ico-circle{
+        height: 50px;
+        width: 50px;
+        font-size: 01rem;
+        border-radius: 50%;
+        line-height: 0.5;
+    }
+    .pre-work-content .row{
+        font-size: 1rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        
+    }
+    .pre-work-content .row .col-xs-4{
+        width: 50%;
+    }
+    #work{
+        margin-top: 35%;
+    }
+    .contact-background{
+        height: 200%;
+    }
+    .contact-background .container .col-xs-5{
+        width: 50%;
+    }
+    .contact-background{
+        -ms-overflow-style:none ;
+    }
+}
+.pre-work-icon .pre-ico-circle{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+.pre-work-icon .pre-work-ico-circle i{
+    color: rgb(255, 255, 255);
+}
+.pre-work-ico-circle{
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #CDE1F8;
+    display: block;
+}
+/********* end of pre-work section**************/
+/******* work section ********/
+.work-plus{
+    font-size: 2rem;
+    color: #0078ff;
+    float: right;
+    height: 100%;    
+}
+.work-img{
+    overflow: hidden;
+}
+.work-img img{
+    transition: transform 1s;
+}
+.work-img img:hover{
+transform: scale(1.1,1.1);
+}
+
+.work-plus span{
+    padding: 5%;
+}
+
+.work-plus span{
+    transition: transform 1s;
+}
+.work-plus span:hover{
+   transform: scale(1.1,1.1);
+}
+#work .container{
+    padding-top: 15%;
+}
+/*************End of work section**************/
+/**************pre- Blog Section***************/
+.pre-blog-baseLayer{
+    background: url(../images/overlay-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.pre-blog-background-color{
+    background-color: rgba(32, 115, 211, 0.6);
+}
+<div class="carousel-inner">
+<div class="carousel-item active" data-bs-interval="10000">
+    <div class="container text-center w-100">
+        <div class="row gy-5">
+            <div class="col-md-12  d-flex justify-content-center ">
+                <div class="carousel-img w-25">
+                    <img src="./images/testimonial-4.jpg"
+                        class="w-100 rounded-circle align-self-center" alt="testimonial">
+                </div>
+            </div>
+            <div class="col-md-12 text-center w-100">
+                <div class="carousel-caption">
+                    <h4>Marta Socrate</h4>
+                    <p class="lead">Curabitur arcu erat, accumsan id imperdiet et, porttitor
+                        at sem. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="carousel-item" data-bs-interval="2000">
+    <div class="container text-center w-100">
+        <div class="row gy-5">
+            <div class="col-md-12  d-flex justify-content-center ">
+                <div class="carousel-img w-25">
+                    <img src="./images/testimonial-2.jpg"
+                        class="w-100 rounded-circle align-self-center" alt="testimonial">
+                </div>
+            </div>
+            <div class="col-md-12 text-center w-100">
+                <div class="carousel-caption">
+                    <h4>Xavi Alonso</h4>
+                    <p class="lead">Curabitur arcu erat, accumsan id imperdiet et, porttitor
+                        at sem. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 50%;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+.carousel-indicators [aria-current="true"]{
+    background-color: #fff;
+    opacity: 1;
+}
+/************** End of pre-Blog section*******************/
+/************** Blog Section *****************************/
+.footer-img{
+    width: 15%;
+}
+/******* Contact section *******************/
+.contact-base-layer{
+    background: url(../images/overlay-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contact-background{
+    background-color: rgba(32, 115, 211, 0.6);
+    height: fit-content;
+
+
+    overflow: hidden;
+}
+
+  @media screen and (max-width:540px) {
+    .contact-base-layer{
+        background: url(../images/overlay-bg.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1000px;
+    }
+    .contact-background{
+        background-color: rgba(32, 115, 211, 0.6);
+        height: fit-content;
+        height: 800px;
+        scrollbar-width: none;
+        overflow: hidden;
+    }
+    .contact-background  .container{
+        padding-block: 10%;
+        margin-inline: 5%;
+        height: 600px;
+        background-color: red;
+      }
+  }
+  @media screen and (min-width:370px) and (max-width:430px) {
+    #contact{
+        height: 1200px;
+    }
+    .contact-background{
+        height: 1200px;
+    }
+    .contact-base-layer{
+        background: url(../images/overlay-bg.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1200px;
+    }
+    .contact-background{
+        background-color: rgba(32, 115, 211, 0.6);
+        height: fit-content;
+        height: 1200px;
+        scrollbar-width: none;
+        overflow: hidden;
+    }
+    .contact-background  .container{
+        padding-block: 10%;
+        margin-inline: 5%;
+        height: 1000px;
+        background-color: red;
+      }
+  }
+  @media screen and (min-width:34px) and (max-width:375px) {
+    #contact{
+        height: 1300px;
+    }
+    .contact-background{
+        height: 1200px;
+    }
+    .contact-base-layer{
+        background: url(../images/overlay-bg.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1300px;
+    }
+    .contact-background{
+        background-color: rgba(32, 115, 211, 0.6);
+        height: fit-content;
+        height: 1300px;
+        scrollbar-width: none;
+        overflow: hidden;
+    }
+    .contact-background  .container{
+        padding-block: 10%;
+        /* margin-inline: 5%; */
+        height: 1200px;
+      }
+  }
+  /* .contact-background  .container{
+    padding-block: 8%;
+    height: 800px;
+  } */
+.form-header::after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 2%;
+height: 3px;
+width: 25%;
+background-color: var(--bs-primary);
+z-index: 99;
+}
+ul li{
+    list-style: none;
+}
+.brandIcon i{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding-top: 0;
+    border-color: var(--bs-primary);
+    transition: all 500mss;
+    color: initial;
+}
+div.brandIcon{
+    border-color: var(--bs-primary);
+    transition: all 1s;
+}
+.brandIcon:hover{
+    background-color: var(--bs-primary);
+    border-color: rgba(32, 115, 211, 0.1);
+}
+.brandIcon:hover .foot-icon{
+    color: var(--font-color-default);
+}
+/****** End of contact section ************/
